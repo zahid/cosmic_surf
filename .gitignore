@@ -1,4 +1,4 @@
-_Store
+.DS_Store
 *.swp
 *.Trashes
 
@@ -9,4 +9,4 @@ Temp
 *.pidb
 *.unityproj
 *.sln
-*.userprefs 
+*.userprefs
