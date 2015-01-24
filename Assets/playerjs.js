@@ -15,16 +15,27 @@ var z_vel : float = 0.0; // speed in the z axis
 var z_damping : float = 5.0; // damping (m/s/s)
 var z_input_scale:float = 5.0; // scale the input
 
-function Start () {
+var otherPlayer : playerjs; 
 
+function Start () { }
+
+function OnTriggerEnter (other : Collider) {
+	if(other.tag.Equals("enemy")) {
+		Debug.Log("hit enemy " + other.gameObject.name);
+	} else if(other.tag.Equals("Player")) {
+		otherPlayer = other.gameObject.GetComponent(playerjs);
+		otherPlayer.alpha = -otherPlayer.alpha/2;
+	}
+	
 }
-
+	
 function Update () {
 	//  angular updates
 	alpha = Mathf.Clamp(alpha +(Input.GetAxis(horiz_axis)*input_scale*Time.deltaTime),-alpha_max,alpha_max);
 	rad = rad+alpha*Time.deltaTime;
 	// z updates
 	z_vel = z_input_scale * Input.GetAxis(vert_axis);
+	
 	// position updates
 	transform.position = Vector3(
 		radius*Mathf.Cos(rad),

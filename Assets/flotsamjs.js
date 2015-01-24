@@ -2,7 +2,7 @@
 
 var flot_prefab : Transform; // used to instantiate enemies
 var last_flot : float; // time of the last spawn of a flotsam (s)
-var spawn_period : float = 1.1; // period between spawns, (s)
+var spawn_period : float = .5; // period between spawns, (s)
 
 function Start () {
 	last_flot = Time.time; // init the time
