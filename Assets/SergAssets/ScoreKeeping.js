@@ -4,18 +4,18 @@ var Score:GUIText;
 var ResourceCount:float;
 
 function Start () {
-    ResourceCount=0;
+    ResourceCount=4.6;
 
 }
 
 function Update () {
-    Score.text=""+ResourceCount;
+    Score.text=""+Mathf.Round(ResourceCount);
 
     if(Input.GetKey(KeyCode.Space)){
         ResourceCount+=2;    
     }
 
-    if(ResourceCount<0){
+    if(ResourceCount<1){
         ResourceCount=0;    
     }
 
@@ -26,7 +26,7 @@ function Update () {
 
 function OnTriggerEnter(Other:Collider){
     if(Other.tag=="OPP"){
-        ResourceCount-=20;
+        ResourceCount-=ResourceCount/2;
     }
     if(Other.tag=="Resource"){
         ResourceCount+=2;    
