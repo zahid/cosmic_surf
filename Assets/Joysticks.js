@@ -9,5 +9,4 @@ function Start () {
 }
 
 function Update () {
-
 }
