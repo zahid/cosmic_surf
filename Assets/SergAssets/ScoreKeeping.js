@@ -1,34 +1,35 @@
 ﻿#pragma strict
 
-var Score:GUIText;
-var ResourceCount:float;
+var Score : GUIText;
+var ResourceCount : float;
 
 function Start () {
-    ResourceCount=4.6;
-
+    ResourceCount = 0;
 }
 
 function Update () {
-    Score.text=""+Mathf.Round(ResourceCount);
+    Score.text= "$ " + Mathf.Round(ResourceCount);
 
     if(Input.GetKey(KeyCode.Space)){
-        ResourceCount+=2;    
+        ResourceCount += 1;    
     }
 
-    if(ResourceCount<1){
-        ResourceCount=0;    
+    if(ResourceCount < 1){
+        ResourceCount = 0;    
     }
 
-    if(ResourceCount>100){
-        ResourceCount=100;
+    if(ResourceCount > 100){
+        ResourceCount = 100;
     }
 }
 
-function OnTriggerEnter(Other:Collider){
-    if(Other.tag=="OPP"){
-        ResourceCount-=ResourceCount/2;
+/*function OnTriggerEnter(Other:Collider){
+    if (Other.tag.Equals("OPP")) {
+        ResourceCount = ResourceCount / 2;
     }
-    if(Other.tag=="Resource"){
-        ResourceCount+=2;    
+    if (Other.tag.Equals("Resource")) {
+    	Debug.Log("+1");
+    	GameObject.Destroy(Other.gameObject);
+        ResourceCount += 1;    
     }
-}
+}*/

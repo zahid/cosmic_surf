@@ -15,6 +15,8 @@ var z_vel : float = 0.0; // speed in the z axis
 var z_damping : float = 5.0; // damping (m/s/s)
 var z_input_scale:float = 5.0; // scale the input
 
+var score : float = 0.0;
+
 var otherPlayer : playerjs; 
 
 function Start () { }
@@ -22,29 +24,38 @@ function Start () { }
 function OnTriggerEnter (other : Collider) {
 	if(other.tag.Equals("enemy")) {
 		Debug.Log("hit enemy " + other.gameObject.name);
+		score = score / 2;
 	} else if(other.tag.Equals("Player")) {
 		otherPlayer = other.gameObject.GetComponent(playerjs);
-		otherPlayer.alpha = -otherPlayer.alpha/2;
+		otherPlayer.alpha = -otherPlayer.alpha / 2;
+	} else if(other.tag.Equals("Resource")) {
+		Debug.Log("hit dollar");
+		score++;
+		GameObject.Destroy(other.gameObject);
 	}
-	
 }
 	
 function Update () {
 	//  angular updates
-	alpha = Mathf.Clamp(alpha +(Input.GetAxis(horiz_axis)*input_scale*Time.deltaTime),-alpha_max,alpha_max);
-	rad = rad+alpha*Time.deltaTime;
+	alpha = Mathf.Clamp(
+		alpha + (Input.GetAxis(horiz_axis) * input_scale * Time.deltaTime), 
+		-alpha_max, 
+		alpha_max
+	);
+	
+	rad = rad + alpha * Time.deltaTime;
 	// z updates
 	z_vel = z_input_scale * Input.GetAxis(vert_axis);
 	
 	// position updates
 	transform.position = Vector3(
-		radius*Mathf.Cos(rad),
-		radius*Mathf.Sin(rad),
+		radius * Mathf.Cos(rad),
+		radius * Mathf.Sin(rad),
 		Mathf.Clamp(
-			transform.position.z+z_vel*Time.deltaTime,
+			transform.position.z + z_vel * Time.deltaTime,
 			0,
 			3
 		)
 	);
-	transform.rotation = Quaternion.AngleAxis((-Input.GetAxis (horiz_axis)*30)+360*rad/(2*Mathf.PI),Vector3.forward);
+	transform.rotation = Quaternion.AngleAxis( (-Input.GetAxis (horiz_axis) * 30) + 360 * rad / (2 * Mathf.PI), Vector3.forward);
 }
