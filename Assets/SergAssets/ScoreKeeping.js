@@ -23,6 +23,11 @@ function Update () {
     }
 }
 
+function Scored(){
+	ResourceCount+=1;
+	return ResourceCount;
+}
+
 /*function OnTriggerEnter(Other:Collider){
     if (Other.tag.Equals("OPP")) {
         ResourceCount = ResourceCount / 2;

@@ -25,6 +25,7 @@ function OnTriggerEnter (other : Collider) {
 	if(other.tag.Equals("enemy")) {
 		Debug.Log("hit enemy " + other.gameObject.name);
 		score = score / 2;
+		Destroy(other.gameObject);
 	} else if(other.tag.Equals("Player")) {
 		otherPlayer = other.gameObject.GetComponent(playerjs);
 		otherPlayer.alpha = -otherPlayer.alpha / 2;
