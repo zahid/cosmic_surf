@@ -18,8 +18,8 @@ var last_position:float;
 var last_time:float;
 
 function Start () {
-	state = 'empty';
 	
+	/*
 	// spiral test
 	state = 'line';
 	number = 2;
@@ -30,7 +30,22 @@ function Start () {
 	
 	last_time = Time.time;
 	last_position = start_position;
+	*/
 	
+}
+
+function set_pattern(
+	state_:String,
+	period_:float,
+	number_:int,
+	start_position_:float,
+	offset_:float,
+	spacing_:float,
+	duration_:float){
+	state = state_;period = period_;number = number_;offset = offset_;spacing = spacing_;duration = duration_;
+	start_time = Time.time;
+	last_time = Time.time-period_;
+	last_position = start_position_;
 }
 
 function spawn_at_rad(rad:float){
@@ -41,7 +56,15 @@ function spawn_at_rad(rad:float){
 	return spawn;
 }
 
+function stop_pattern(){
+	state = 'empty';
+	}
+
 function Update () {
+	if((Time.time-start_time)>duration){
+	//Debug.Log(Time.time-start_time);
+			stop_pattern();
+	}
 	if(state=='rando'){
 		if((Time.time-last_time)>period){
 			last_time = last_time+period;
