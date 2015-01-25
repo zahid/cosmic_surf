@@ -19,6 +19,10 @@ function Start () {
 
 }
 
+function OnTriggerEnter(collision:Collider){
+	Debug.Log(collider);
+}
+
 function Update () {
 	//  angular updates
 	alpha = Mathf.Clamp(alpha +(Input.GetAxis(horiz_axis)*input_scale*Time.deltaTime),-alpha_max,alpha_max);
