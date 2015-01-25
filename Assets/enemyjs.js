@@ -6,7 +6,7 @@ private var spawn_time:float; // time of creation
 private var flight_time:float; // time expected in flight
 
 function Start () {
-	renderer.material.color = Color.red;
+	//renderer.material.color = Color.red;
 	rigidbody.velocity = Vector3(0,0,-z_speed);
 	spawn_time  = Time.time;
 	flight_time = (transform.position.z)/z_speed;
