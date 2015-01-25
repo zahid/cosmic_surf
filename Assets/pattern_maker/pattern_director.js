@@ -97,8 +97,11 @@ function Update () {
 		} else if(0==level%5){
 			// always reset on mod five
 		} else {
-			random_asteroid(160/(120+level));
-			random_sand(160/(120+level));
+			random_asteroid(160/(120+Mathf.Min(level,30)));
+			random_sand(160/(120+Mathf.Min(level,30)));
+			if(level==15){
+				level=0;
+			}
 		}
 	}
 }
