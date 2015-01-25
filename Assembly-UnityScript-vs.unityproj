@@ -5,7 +5,7 @@
 	<Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
 	<ProductVersion>10.0.20506</ProductVersion>
 	<SchemaVersion>2.0</SchemaVersion>
-	<ProjectGuid>{D11E9C9C-B5CE-8653-B3C6-E53109736F0E}</ProjectGuid>
+	<ProjectGuid>{6F9989C5-1FEB-E031-7A57-056479E1CFA2}</ProjectGuid>
 	<OutputType>Library</OutputType>
 	<AppDesignerFolder>Properties</AppDesignerFolder>
 	<RootNamespace></RootNamespace>
@@ -46,7 +46,13 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\Joysticks.js" />
+     <Compile Include="Assets\PlayerContainer.js" />
+     <Compile Include="Assets\SergAssets\ScoreKeeping.js" />
+     <Compile Include="Assets\SergAssets\Stars Sprte.js" />
+     <Compile Include="Assets\enemyjs.js" />
      <Compile Include="Assets\flotsamjs.js" />
+     <Compile Include="Assets\playerjs.js" />
  <Reference Include="UnityEngine.UI">
  <HintPath>/Applications/Unity/Unity.app/Contents/UnityExtensions/Unity/GUISystem/4.6.1/UnityEngine.UI.dll</HintPath>
  </Reference>

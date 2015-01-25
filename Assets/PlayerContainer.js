@@ -2,7 +2,7 @@
 
 var controller_num : String = "1";
 var surfer_prefab : Transform;
-var state : String = "standby";
+var state : String = "dead";
 var last_rad : float = 0.0;
 private var recovery_start_time : float;
 private var dying_start_time : float;

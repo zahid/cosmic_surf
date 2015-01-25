@@ -1,0 +1,115 @@
+fileFormatVersion: 2
+guid: 7edfc494d7b9c413281bfb7ab4f7dcf2
+ModelImporter:
+  serializedVersion: 16
+  fileIDToRecycleName:
+    100000: //RootNode
+    100002: surfer_rig:Board
+    100004: surfer_rig:Head
+    100006: surfer_rig:Hips
+    100008: surfer_rig:jnts
+    100010: surfer_rig:L_Arm
+    100012: surfer_rig:L_Clav
+    100014: surfer_rig:L_Foot
+    100016: surfer_rig:L_Hip
+    100018: surfer_rig:L_Knee
+    100020: surfer_rig:L_Shld
+    100022: surfer_rig:L_Wrist
+    100024: surfer_rig:mesh
+    100026: surfer_rig:R_Arm
+    100028: surfer_rig:R_Clav
+    100030: surfer_rig:R_Foot
+    100032: surfer_rig:R_Hip
+    100034: surfer_rig:R_Knee
+    100036: surfer_rig:R_Shld
+    100038: surfer_rig:R_Wrist
+    100040: surfer_rig:rig
+    100042: surfer_rig:SpineA
+    100044: surfer_rig:SpineB
+    100046: surfer_rig:Surfboard
+    100048: surfer_rig:Surfer
+    400000: //RootNode
+    400002: surfer_rig:Board
+    400004: surfer_rig:Head
+    400006: surfer_rig:Hips
+    400008: surfer_rig:jnts
+    400010: surfer_rig:L_Arm
+    400012: surfer_rig:L_Clav
+    400014: surfer_rig:L_Foot
+    400016: surfer_rig:L_Hip
+    400018: surfer_rig:L_Knee
+    400020: surfer_rig:L_Shld
+    400022: surfer_rig:L_Wrist
+    400024: surfer_rig:mesh
+    400026: surfer_rig:R_Arm
+    400028: surfer_rig:R_Clav
+    400030: surfer_rig:R_Foot
+    400032: surfer_rig:R_Hip
+    400034: surfer_rig:R_Knee
+    400036: surfer_rig:R_Shld
+    400038: surfer_rig:R_Wrist
+    400040: surfer_rig:rig
+    400042: surfer_rig:SpineA
+    400044: surfer_rig:SpineB
+    400046: surfer_rig:Surfboard
+    400048: surfer_rig:Surfer
+    4300000: surfer_rig:Surfer
+    4300002: surfer_rig:Board
+    7400000: Take 001
+    9500000: //RootNode
+    13700000: surfer_rig:Board
+    13700002: surfer_rig:Surfer
+  materials:
+    importMaterials: 1
+    materialName: 0
+    materialSearch: 1
+  animations:
+    legacyGenerateAnimations: 4
+    bakeSimulation: 0
+    optimizeGameObjects: 0
+    motionNodeName: 
+    animationCompression: 1
+    animationRotationError: .5
+    animationPositionError: .5
+    animationScaleError: .5
+    animationWrapMode: 0
+    extraExposedTransformPaths: []
+    clipAnimations: []
+    isReadable: 1
+  meshes:
+    lODScreenPercentages: []
+    globalScale: .00999999978
+    meshCompression: 0
+    addColliders: 0
+    importBlendShapes: 1
+    swapUVChannels: 0
+    generateSecondaryUV: 0
+    useFileUnits: 1
+    optimizeMeshForGPU: 1
+    weldVertices: 1
+    secondaryUVAngleDistortion: 8
+    secondaryUVAreaDistortion: 15.000001
+    secondaryUVHardAngle: 88
+    secondaryUVPackMargin: 4
+  tangentSpace:
+    normalSmoothAngle: 60
+    splitTangentsAcrossUV: 1
+    normalImportMode: 0
+    tangentImportMode: 1
+  importAnimation: 1
+  copyAvatar: 0
+  humanDescription:
+    human: []
+    skeleton: []
+    armTwist: .5
+    foreArmTwist: .5
+    upperLegTwist: .5
+    legTwist: .5
+    armStretch: .0500000007
+    legStretch: .0500000007
+    feetSpacing: 0
+    rootMotionBoneName: 
+  lastHumanDescriptionAvatarSource: {instanceID: 0}
+  animationType: 2
+  additionalBone: 0
+  userData: 

@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/playerjs.js">
+    <Files>
+      <File FileName="Assets/SergAssets/Stars Sprte.js" Line="8" Column="1" />
+      <File FileName="Assets/flotsamjs.js" Line="1" Column="1" />
+      <File FileName="Assets/enemyjs.js" Line="1" Column="1" />
+      <File FileName="Assets/playerjs.js" Line="22" Column="43" />
+      <File FileName="Assets/SergAssets/ScoreKeeping.js" Line="1" Column="1" />
+      <File FileName="Assets/Joysticks.js" Line="1" Column="1" />
+      <File FileName="Assets/PlayerContainer.js" Line="22" Column="36" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
