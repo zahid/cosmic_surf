@@ -58,7 +58,7 @@ function random_asteroid(period:float){
 function Start () {
 	active_duration = 45.714286/4;
 	level = 0;
-	next_level_time = Time.time+active_duration;
+	next_level_time = Time.time+active_duration/2;
 	//n_player_spiral_with_ast(4,Mathf.PI/8,168/120);
 	//rings(active_duration/3,16);
 }
@@ -67,9 +67,13 @@ function Update () {
 	if(Time.time>next_level_time){
 		level = level+1;
 		Debug.Log('Level '+level);
-		next_level_time = next_level_time+active_duration; 
+		if(0==level%5){
+			next_level_time = next_level_time+active_duration/2;
+		}else{
+			next_level_time = next_level_time+active_duration;
+		}
 		// GET PLAYER COUNT HERE
-		var player_count = 1;
+		var player_count = Mathf.Max(1,GameObject.FindGameObjectsWithTag('Player').Length);
 		if(level == 1){
 			n_player_spiral(player_count,0.0,160/60);
 		} else if(level ==2){
@@ -77,7 +81,24 @@ function Update () {
 		} else if(level ==3){
 			rings(2*160/60,16);
 		} else if(level ==4){
-			n_player_spiral(player_count,Mathf.PI/16,160/60);
+			n_player_spiral(player_count,Mathf.PI/8,160/60);
+		} else if(level ==5){
+			// rest
+		} else if(level ==6){
+			random_sand(160/60);
+		} else if(level ==7){
+			random_asteroid(160/60);
+		} else if(level ==8){
+			n_player_spiral(player_count,Mathf.PI/8,160/60);
+		} else if(level ==9){
+			n_player_spiral_with_ast(player_count,Mathf.PI/8,160/60);
+		} else if(level ==10){
+			// rest
+		} else if(0==level%5){
+			// always reset on mod five
+		} else {
+			random_asteroid(160/(120+level));
+			random_sand(160/(120+level));
 		}
 	}
 }
