@@ -28,10 +28,10 @@ function OnTriggerEnter (other : Collider) {
 	} else if(other.tag.Equals("Player")) {
 		otherPlayer = other.gameObject.GetComponent(playerjs);
 		otherPlayer.alpha = -otherPlayer.alpha / 2;
-	} else if(other.tag.Equals("Resource")) {
-		Debug.Log("hit dollar");
+	} else if(other.tag.Equals("sandDollar")) {
+		Debug.Log("hit sand dollar");
 		score++;
-		GameObject.Destroy(other.gameObject);
+		Destroy(other.gameObject);
 	}
 }
 	
